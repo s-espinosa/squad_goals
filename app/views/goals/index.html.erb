@@ -1,0 +1,53 @@
+<h1>Goals</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Level</th>
+    <th>Complete?</th>
+  </tr>
+
+  <tr class="table-subhead">
+    <td>Individual</td>
+  </tr>
+  <% @goals.individual.each do |goal| %>
+    <tr class="table-subhead">
+      <td><%= goal.description %></td>
+      <td><%= goal.level.capitalize %></td>
+      <td><%= goal.complete? %></td>
+    </tr>
+  <% end %>
+
+  <tr class="table-subhead">
+    <td>Team</td>
+  </tr>
+  <% @goals.team.each do |goal| %>
+    <tr class="table-subhead">
+      <td><%= goal.description %></td>
+      <td><%= goal.level.capitalize %></td>
+      <td><%= goal.complete? %></td>
+    </tr>
+  <% end %>
+
+  <tr class="table-subhead">
+    <td>Community</td>
+  </tr>
+  <% @goals.community.each do |goal| %>
+    <tr class="table-subhead">
+      <td><%= goal.description %></td>
+      <td><%= goal.level.capitalize %></td>
+      <td><%= goal.complete? %></td>
+    </tr>
+  <% end %>
+
+  <tr class="table-subhead">
+    <td>Professional/Leadership</td>
+  </tr>
+  <% @goals.professional.each do |goal| %>
+    <tr class="table-subhead">
+      <td><%= goal.description %></td>
+      <td><%= goal.level.capitalize %></td>
+      <td><%= goal.complete? %></td>
+    </tr>
+  <% end %>
+</table>
