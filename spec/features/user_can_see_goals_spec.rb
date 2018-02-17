@@ -10,7 +10,7 @@ describe "When I visit '/goals'" do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit user_goals_path(user)
+      visit goals_path
 
       expect(page).to have_content("Speak at a conference")
       expect(page).to have_content("Learn Haskell")
@@ -31,7 +31,7 @@ describe "When I visit '/goals'" do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit user_goals_path(user)
+      visit goals_path
 
       expect(page).to have_content("Speak at a conference")
       expect(page).to have_content("Learn Haskell")
@@ -42,7 +42,5 @@ describe "When I visit '/goals'" do
       expect(page).to have_content("Reach")
       expect(page).to_not have_content("Type faster")
     end
-
-
   end
 end
