@@ -1,4 +1,6 @@
 class Goal < ApplicationRecord
+  belongs_to :user
+
   enum focus_area: ["inividual", "team", "community", "professional"]
   enum level: ["expected", "possible", "reach"]
 
