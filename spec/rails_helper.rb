@@ -26,6 +26,21 @@ require 'rspec/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+  :provider => 'github',
+  :uid => '123545',
+  :info => {
+    :nickname => "s-espinosa",
+    :email    => nil,
+    :name     => "Sal Espinosa"
+  },
+  :credentials => {
+    :token => "1234567890",
+    :expires => false
+  }
+})
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
