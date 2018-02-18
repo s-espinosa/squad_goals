@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/s-espinosa/squad_goals.svg?branch=master)](https://travis-ci.org/s-espinosa/squad_goals)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
