@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     @user = User.find_or_create_from_auth_hash(auth_hash)
     self.current_user = @user
     flash[:success] = "Welcome, #{current_user.name}!"
-    redirect_to user_goals_path(current_user)
+    redirect_to goals_path
   end
 
   protected
