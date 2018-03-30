@@ -11,6 +11,9 @@ describe 'As a logged in user' do
       fill_in "goal[description]", with: "Speak at a conference"
       select "Expected", from: "goal[level]"
       select "Community", from: "goal[focus_area]"
+
+      click_on "Create Goal"
+      expect(page).to have_content("Speak at a conference")
     end
   end
 end
