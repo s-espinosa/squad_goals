@@ -1,0 +1,13 @@
+<h1>Create New Goal</h1>
+
+<%= form_for @goal do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :level %>
+  <%= f.select :level, ["Expected", "Possible", "Reach"]
+ %>
+ <%= f.label :focus_area %>
+ <%= f.select :focus_area, ["Inividual", "Team", "Community", "Professional"]
+%>
+<%= f.submit %>
+<% end %>
